@@ -1,0 +1,303 @@
+html {
+    overflow: hidden;
+}
+
+h1 {
+    margin: auto;
+}
+
+.esconde {
+    visibility: hidden;
+    position: absolute;
+}
+
+.output {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 160px;
+    height: 160px;
+    border: 3px solid white;
+    border-radius: 18px;
+}
+
+/* Enemy */
+.enemy {
+    position: absolute;
+    top: 2%;
+    left: calc(50% - 150px);
+    width: 300px;
+    z-index: 10001;
+    transition: 1s ease, top 1s ease;
+    visibility: hidden;
+}
+
+/* Nave */
+#nave {
+    position: absolute;
+    bottom: 30px;
+    left: calc(50% - 50px);
+    width: 100px;
+    transition: 0.1s ease, top 0.1s ease;
+    z-index: 10000;
+}
+
+/* Tiros */
+#tiro {
+    position: absolute;
+    height: 36px;
+    visibility: hidden;
+    bottom: 220px;
+    left: calc(50% - 5px);
+    width: 20px;
+    background-color: white;
+    border-radius: 8px;
+    z-index: 10;
+}
+
+#tiro2 {
+    position: absolute;
+    height: 36px;
+    visibility: hidden;
+    bottom: 220px;
+    left: calc(50% - 5px);
+    width: 20px;
+    background-color: white;
+    border-radius: 8px;
+    z-index: 10;
+}
+
+/* Profile Astronauta */
+#divProfile {
+    position: absolute;
+    bottom: 50px;
+    left: 25px;
+    display: flex;
+    align-items: center;
+}
+
+.heart {
+    width: 50px;
+}
+
+#profile {
+    width: 75px;
+    border-radius: 25%;
+    border: 3px solid white;
+}
+
+/* LifeBar */
+.container-flex {
+    display: flex;
+    justify-content: center;
+}
+
+.lifeEnemy {
+    display: flex;
+    position: absolute;
+    background-color: #FE0000;
+    border-radius: 5px;
+    top: 0px;
+    width: 100%;
+    height: 5px;
+    color: white;
+    font-size: 26px;
+    text-align: center;
+    transition: 1s;
+}
+
+/* Danos */
+.hit-enemy {
+    background-color: white;
+    width: 100px;
+}
+
+.hit-ally {
+    background-color: white;
+    width: 300px;
+}
+
+/* Tela de loading */
+.divLoading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: 10002;
+    color: white;
+}
+
+.loading {
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+.carregando {
+    display: flex;
+    gap: 12px;
+    position: absolute;
+    bottom: 50px;
+    left: calc(50% - 200px);
+}
+
+.divTexto {
+    display: inline-block;
+}
+
+.texto {
+    font-size: 5em;
+    letter-spacing: 10px;
+    font-family: monospace;
+    border-right: 5px solid;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 2s steps(21),
+        cursor .4s step-end infinite alternate;
+}
+
+/* Tela Vitória */
+.divVitoria {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: 10002;
+    color: white;
+}
+
+.vitoria {
+    padding: 20px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+.happyGuy {
+    display: flex;
+    gap: 12px;
+    position: absolute;
+    bottom: 75px;
+    left: calc(50% - 120px);
+}
+
+.divMsgVitoria {
+    display: inline-block;
+}
+
+.msgVitoria,
+.subMsgVitoria {
+    text-align: center;
+    font-size: 5em;
+    letter-spacing: 10px;
+    font-family: monospace;
+    border-right: 5px solid;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 2s steps(8),
+        cursor .4s step-end infinite alternate;
+}
+
+.subMsgVitoria {
+    font-size: 3em;
+    animation: typing 2s steps(23),
+        cursor .4s step-end infinite alternate;
+}
+
+/* Tela Derrota */
+.divDerrota {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: 10002;
+    color: white;
+}
+
+.derrota {
+    padding: 20px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+.badGuy {
+    display: flex;
+    gap: 12px;
+    position: absolute;
+    bottom: 75px;
+    left: calc(50% - 120px);
+}
+
+.divMsgDerrota {
+    display: inline-block;
+}
+
+.msgDerrota,
+.subMsgDerrota {
+    text-align: center;
+    font-size: 5em;
+    letter-spacing: 10px;
+    font-family: monospace;
+    border-right: 5px solid;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 2s steps(8),
+        cursor .4s step-end infinite alternate;
+}
+
+.subMsgDerrota {
+    font-size: 3em;
+    animation: typing 2s steps(23),
+        cursor .4s step-end infinite alternate;
+}
+
+@keyframes cursor {
+    50% {
+        border-color: transparent;
+    }
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+}
+
+@keyframes damage {
+    0% {
+        opacity: 1
+    }
+
+    80% {
+        opacity: 0.1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

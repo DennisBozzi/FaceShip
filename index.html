@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="css/sets.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils@0.1/control_utils.css" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils@0.1/camera_utils.js"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils@0.1/control_utils.js"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils@0.1/drawing_utils.js"
+        crossorigin="anonymous"></script>
+    <script src="js/mediapipe/face_detection.js" crossorigin="anonymous"></script>
+    <script src="js/jquery-3.7.0.js"></script>
+</head>
+
+<body>
+
+    <!-- WebCam Input -->
+    <video class="input_video esconde"></video>
+
+    <!-- MediaPipe Output -->
+    <canvas class="output"></canvas>
+
+    <!-- MediaPipe Sets -->
+    <div class="loading">
+        <div class="spinner"></div>
+    </div>
+
+    <div class="control esconde">
+    </div>
+
+    <!-- Enemy -->
+    <img id="enemy" src="images/bat.gif" class="enemy">
+
+    <!-- Canva Jogo -->
+    <div>
+        <canvas id="jogo"></canvas>
+    </div>
+
+    <!-- Nave -->
+    <img id="nave" src="images/NaveRosa.gif" class="nave">
+
+    <!-- Profile -->
+    <div id="divProfile">
+
+        <img id="profile" src="images/Profile.gif" alt="">
+
+        <img class="heart" id="heart1" src="images/Heart.png" alt="" style="margin-left: 12px;">
+        <img class="heart" id="heart2" src="images/Heart.png" alt="">
+        <img class="heart" id="heart3" src="images/Heart.png" alt="">
+
+    </div>
+
+    <!-- Barra de vida -->
+    <div id="cd" class="container-flex">
+        <div class="lifeEnemy" id="lifeEnemy">
+            <!-- <h1>Vida</h1> -->
+        </div>
+    </div>
+
+    <!-- Tiros -->
+    <div id="tiro"></div>
+    <div id="tiro2"></div>
+
+    <!-- Tela de loading -->
+    <div class="divLoading">
+        <div class="loading">
+
+            <div class="divTexto">
+                <p class="texto">Mova sua cabeça.</p>
+            </div>
+
+            <div class="carregando">
+                <img src="images/headWBG.gif" alt="" width="420px">
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Tela de vitória -->
+    <div class="divVitoria" id="divVitoria">
+
+        <div class="vitoria">
+
+            <div class="divMsgVitoria">
+                <p class="msgVitoria">Vitória!</p>
+                <p class="subMsgVitoria">Obrigado pela presença!</p>
+            </div>
+
+            <div class="happyGuy">
+                <img src="images/Astronauta.gif" alt="" width="240px">
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Tela de derrota -->
+    <div class="divDerrota" id="divDerrota">
+
+        <div class="derrota">
+
+            <div class="divMsgDerrota">
+                <p class="msgDerrota">Derrota!</p>
+                <p class="subMsgDerrota">O inimigo te derrotou!</p>
+            </div>
+
+            <div class="badGuy">
+                <img src="images/Ghost.gif" alt="" width="240px">
+            </div>
+
+        </div>
+
+    </div>
+
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
+
+</html>

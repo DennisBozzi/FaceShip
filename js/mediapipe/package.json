@@ -1,0 +1,12 @@
+{
+    "name": "@mediapipe/face_detection",
+    "description": "Mediapipe Face Detection Solution",
+    "version": "0.0.1617147085",
+    "author": "mhays@google.com",
+    "license": "Apache-2.0",
+    "homepage": "https://google.github.io/mediapipe/solutions/holistic",
+    "main": "",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    }
+  }
